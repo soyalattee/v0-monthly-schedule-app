@@ -22,3 +22,13 @@
 
 v0 사용하여 개발  
 ts + vite + react + tailwind
+
+### 배포
+
+GitHub Pages를 통해 자동 배포됩니다.
+
+1. GitHub 리포지토리에서 Settings > Pages로 이동
+2. Source를 "GitHub Actions"로 설정
+3. `main` 브랜치에 푸시하면 자동으로 빌드 및 배포됩니다
+
+**참고:** 리포지토리 이름이 다르다면 `vite.config.ts`의 `repoName` 변수를 수정하세요.
