@@ -56,11 +56,11 @@ export default function ScheduleCalendar({
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-md p-3">
       <div className="flex items-center justify-between mb-6">
         <button
           onClick={onPrevMonth}
-          className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+          className="p-[] hover:bg-slate-100 rounded-lg transition-colors"
           aria-label="이전 달"
         >
           <ChevronLeft size={20} className="text-slate-600" />
@@ -104,7 +104,7 @@ export default function ScheduleCalendar({
             <button
               key={day}
               onClick={() => onSelectDay(isSelected ? null : day)}
-              className={`aspect-square p-2 rounded-lg border-2 transition-all ${
+              className={`aspect-square p-[2px] rounded-lg border-2 transition-all ${
                 isSelected
                   ? "border-blue-500 bg-blue-50"
                   : scheduleCode
@@ -112,8 +112,8 @@ export default function ScheduleCalendar({
                   : "border-slate-200 bg-white hover:border-slate-300"
               }`}
             >
-              <div className="h-full flex flex-col items-center justify-center gap-1">
-                <div className="text-lg font-bold text-slate-900">{day}</div>
+              <div className="h-full flex flex-col items-center justify-center gap-[2px]">
+                <div className="text-md font-bold text-slate-900">{day}</div>
                 {scheduleCode && (
                   <div className={`text-xs font-semibold ${colors.text}`}>
                     {colors.label}
